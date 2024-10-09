@@ -7,8 +7,6 @@
   <title>Log in</title>
  
   <style>
-   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-      *{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -135,47 +133,6 @@
       </div>
     </div>
   </div>
-  <script>
-    function validateForm() {
-            // Clear previous error messages
-            document.getElementById("emailError").innerText = "";
-            document.getElementById("passwordError").innerText = "";
-            document.getElementById("successMessage").innerText = "";
-    
-    const email = document.getElementById("email").value.trim();
-            const password = document.getElementById("password").value.trim();
-            
-            
-            let isValid = true;
-
-            // Validate Email
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(email)) {
-                document.getElementById("emailError").innerText = "Please enter a valid email.";
-                isValid = false;
-            }
-
-            // Validate Password
-            if (password === "") {
-                document.getElementById("passwordError").innerText = "Password is required.";
-                isValid = false;
-            } else if (password.length < 6) {
-                document.getElementById("passwordError").innerText = "Password must be at least 6 characters long.";
-                isValid = false;
-            }
-
-            // Validate Confirm Password
-            
-           // Display success message and redirect if all fields are valid
-          if (isValid) {
-            document.getElementById("successMessage").innerText = "Redirecting...";
-            setTimeout(() => {
-                window.location.href = "client.html"; // Change to your target HTML file
-            }, 2000); // Redirect after 2 seconds
-          }
-       
-          return false; // Prevent form submission for demonstration purposes
-        }   
-  </script>
+  
 </body>
 </html>
